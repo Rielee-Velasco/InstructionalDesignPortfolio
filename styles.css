@@ -1,0 +1,236 @@
+:root {
+  color-scheme: light;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 16px;
+  line-height: 1.75;
+  color: #196551;
+  background: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  background-color: #ffffff;
+  background-image: none;
+}
+
+body {
+  color: #196551;
+  background-color: #ffffff;
+  background-image: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  width: min(1120px, calc(100% - 2rem));
+  margin: 0 auto;
+}
+
+.hero {
+  padding: 4rem 0 3rem;
+  background-color: #ffffff;
+  background-image: none;
+  color: #196551;
+  border-bottom: 1px solid #196551;
+}
+
+.eyebrow {
+  margin: 0 0 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.85rem;
+  color: #196551;
+}
+
+.hero h1 {
+  margin: 0 0 1rem;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  line-height: 1.05;
+  color: #196551;
+}
+
+.intro {
+  width: 100%;
+  max-width: none;
+  margin: 0 0 2rem;
+  font-size: 1.05rem;
+  color: #196551;
+}
+
+.section p,
+.contact p,
+.preview-card p,
+.project-details ul li,
+.card p {
+  margin: 1rem 0 0;
+  color: #196551;
+  max-width: none;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.95rem 1.6rem;
+  margin-top: 0.5rem;
+  border-radius: 999px;
+  background: #196551;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 700;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.button:hover {
+  transform: translateY(-1px);
+  background: #196551;
+}
+
+.button.secondary {
+  background: #ffffff;
+  color: #196551;
+  border: 1px solid #196551;
+}
+
+.section {
+  padding: 4rem 0;
+  background: #ffffff;
+}
+
+.section h2 {
+  margin-top: 0;
+  font-size: 2rem;
+  color: #196551;
+}
+
+.section p,
+.contact p,
+.preview-card p,
+.project-details ul li,
+.card p {
+  margin: 1rem 0 0;
+  color: #196551;
+  max-width: 45rem;
+}
+
+.featured {
+  background: #ffffff;
+  border-top: 1px solid #196551;
+  border-bottom: 1px solid #196551;
+}
+
+.hero {
+  border-bottom: 1px solid #196551;
+}
+
+.featured .container {
+  width: 100%;
+  max-width: none;
+  padding: 0 2rem;
+}
+
+.project-header {
+  margin-bottom: 2rem;
+}
+
+.project-header p {
+  max-width: none;
+}
+
+.project-header .button {
+  margin-top: 1.5rem;
+}
+
+footer {
+  padding: 2rem 0;
+  background: #ffffff;
+}
+
+.footer-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-grid,
+.project-details,
+.work .cards {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.project-grid div,
+.project-details article,
+.card,
+.preview-card {
+  padding: 1.75rem;
+  background: #ffffff;
+  border-radius: 1rem;
+  border: 1px solid #196551;
+  box-shadow: 0 12px 24px rgba(25, 101, 81, 0.08);
+}
+
+.project-tag {
+  margin: 0 0 0.5rem;
+  color: #196551;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.75rem;
+}
+
+.project-details h3,
+.card h3,
+.preview-card h3 {
+  margin-top: 0;
+  color: #196551;
+}
+
+.project-details ul {
+  margin: 1rem 0 0;
+  padding-left: 1.3rem;
+  color: #196551;
+}
+
+.project-details ul li {
+  margin-bottom: 0.75rem;
+}
+
+.preview-card {
+  background: #ffffff;
+  border-color: #196551;
+}
+
+.contact {
+  background: #ffffff;
+  color: #196551;
+}
+
+footer {
+  padding: 1.5rem 0;
+  background: #ffffff;
+  color: #196551;
+}
+
+footer p {
+  margin: 0;
+}
+
+@media (max-width: 640px) {
+  .hero {
+    padding: 3rem 0 2rem;
+  }
+
+  .intro {
+    font-size: 1rem;
+  }
+}
