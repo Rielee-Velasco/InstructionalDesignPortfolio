@@ -26,7 +26,7 @@ body {
 }
 
 img {
-  max-width: 100%;
+  max-width: min(1120px, calc(100% - 2rem));
   display: block;
 }
 
@@ -59,8 +59,8 @@ img {
 }
 
 .intro {
-  width: 100%;
-  max-width: none;
+  width: min(1120px, calc(100% - 2rem));
+  margin: 0 auto;
   margin: 0 0 2rem;
   font-size: 1.05rem;
   color: #196551;
@@ -73,7 +73,7 @@ img {
 .card p {
   margin: 1rem 0 0;
   color: #196551;
-  max-width: none;
+  margin: 0 auto;
 }
 
 .button {
@@ -133,9 +133,8 @@ img {
 }
 
 .featured .container {
-  width: 100%;
-  max-width: none;
-  padding: 0 2rem;
+  width: min(1120px, calc(100% - 2rem));
+  margin: 0 auto;
 }
 
 .project-header {
@@ -143,7 +142,7 @@ img {
 }
 
 .project-header p {
-  max-width: none;
+  margin: 0 auto;
 }
 
 .project-header .button {
