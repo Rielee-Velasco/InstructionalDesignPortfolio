@@ -220,6 +220,12 @@ footer p {
   margin: 0;
 }
 
+footer a {
+  font-size: 0.9rem;
+  color: #196551;
+  text-decoration: underline;
+}
+
 @media (max-width: 640px) {
   .hero {
     padding: 3rem 0 2rem;
@@ -228,4 +234,10 @@ footer p {
   .intro {
     font-size: 1rem;
   }
+}
+
+footer a {
+  font-size: 0.9rem;
+  color: #196551;
+  text-decoration: underline;
 }
