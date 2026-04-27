@@ -290,19 +290,21 @@ footer a {
   opacity: 0.8;
 }
 
-/* Project Image */
-.project-image {
-  margin-top: 1.5rem;
+.course-preview-link {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.7rem 1.2rem;
+  background-color: #196551;
+  color: #ffffff;
+  text-decoration: none;
   border-radius: 0.5rem;
-  overflow: hidden;
-  background: #f0f0f0;
+  font-weight: 600;
+  transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
-.project-image img {
-  width: 100%;
-  height: auto;
-  display: block;
-  max-width: 100%;
+.course-preview-link:hover {
+  background-color: #0f4a3a;
+  transform: translateY(-1px);
 }
 
 /* Gallery Section */
