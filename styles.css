@@ -290,6 +290,21 @@ footer a {
   opacity: 0.8;
 }
 
+/* Project Image */
+.project-image {
+  margin-top: 1.5rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  background: #f0f0f0;
+}
+
+.project-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  max-width: 100%;
+}
+
 /* Gallery Section */
 /* Removed - no longer used */
 
