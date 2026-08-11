@@ -3,12 +3,12 @@
   font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   font-size: 16px;
   line-height: 1.75;
-  color: #196551;
+  color: #111111;
   background: #ffffff;
 }
 
 a {
-  color: #196551;
+  color: #c81e2c;
 }
 
 * {
@@ -24,13 +24,13 @@ body {
 }
 
 body {
-  color: #196551;
+  color: #111111;
   background-color: #ffffff;
   background-image: none;
 }
 
 a {
-  color: #196551;
+  color: #c81e2c;
 }
 
 img {
@@ -47,8 +47,8 @@ img {
   padding: 4rem 0 3rem;
   background-color: #ffffff;
   background-image: none;
-  color: #196551;
-  border-bottom: 1px solid #196551;
+  color: #111111;
+  border-bottom: 3px solid #f2b807;
 }
 
 .eyebrow {
@@ -56,14 +56,15 @@ img {
   text-transform: uppercase;
   letter-spacing: 0.18em;
   font-size: 0.85rem;
-  color: #196551;
+  color: #c81e2c;
+  font-weight: 700;
 }
 
 .hero h1 {
   margin: 0 0 1rem;
   font-size: clamp(2.5rem, 5vw, 4rem);
   line-height: 1.05;
-  color: #196551;
+  color: #111111;
 }
 
 .intro {
@@ -71,7 +72,7 @@ img {
   margin: 0 auto;
   margin: 0 0 2rem;
   font-size: 1.05rem;
-  color: #196551;
+  color: #111111;
 }
 
 .section p,
@@ -80,7 +81,7 @@ img {
 .project-details ul li,
 .card p {
   margin: 1rem 0 0;
-  color: #196551;
+  color: #111111;
   margin: 0 auto;
 }
 
@@ -91,7 +92,7 @@ img {
   padding: 0.95rem 1.6rem;
   margin-top: 0.5rem;
   border-radius: 999px;
-  background: #196551;
+  background: #c81e2c;
   color: #ffffff;
   text-decoration: none;
   font-weight: 700;
@@ -100,13 +101,13 @@ img {
 
 .button:hover {
   transform: translateY(-1px);
-  background: #196551;
+  background: #a5171f;
 }
 
 .button.secondary {
   background: #ffffff;
-  color: #196551;
-  border: 1px solid #196551;
+  color: #c81e2c;
+  border: 1px solid #c81e2c;
 }
 
 .section {
@@ -117,7 +118,9 @@ img {
 .section h2 {
   margin-top: 0;
   font-size: 2rem;
-  color: #196551;
+  color: #111111;
+  position: relative;
+  display: inline-block;
 }
 
 .section p,
@@ -126,18 +129,18 @@ img {
 .project-details ul li,
 .card p {
   margin: 1rem 0 0;
-  color: #196551;
+  color: #111111;
   max-width: 45rem;
 }
 
 .featured {
   background: #ffffff;
-  border-top: 1px solid #196551;
-  border-bottom: 1px solid #196551;
+  border-top: 3px solid #f2b807;
+  border-bottom: 3px solid #f2b807;
 }
 
 .hero {
-  border-bottom: 1px solid #196551;
+  border-bottom: 3px solid #f2b807;
 }
 
 .featured .container {
@@ -179,29 +182,31 @@ footer {
   padding: 1.75rem;
   background: #ffffff;
   border-radius: 1rem;
-  border: 1px solid #196551;
-  box-shadow: 0 12px 24px rgba(25, 101, 81, 0.08);
+  border: 1px solid #111111;
+  border-top: 4px solid #f2b807;
+  box-shadow: 0 12px 24px rgba(17, 17, 17, 0.08);
 }
 
 .project-tag {
   margin: 0 0 0.5rem;
-  color: #196551;
+  color: #c81e2c;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   font-size: 0.75rem;
+  font-weight: 700;
 }
 
 .project-details h3,
 .card h3,
 .preview-card h3 {
   margin-top: 0;
-  color: #196551;
+  color: #111111;
 }
 
 .project-details ul {
   margin: 1rem 0 0;
   padding-left: 1.3rem;
-  color: #196551;
+  color: #111111;
 }
 
 .project-details ul li {
@@ -210,18 +215,19 @@ footer {
 
 .preview-card {
   background: #ffffff;
-  border-color: #196551;
+  border-color: #111111;
 }
 
 .contact {
   background: #ffffff;
-  color: #196551;
+  color: #111111;
 }
 
 footer {
   padding: 1.5rem 0;
   background: #ffffff;
-  color: #196551;
+  color: #111111;
+  border-top: 3px solid #f2b807;
 }
 
 footer p {
@@ -230,7 +236,7 @@ footer p {
 
 footer a {
   font-size: 0.9rem;
-  color: #196551;
+  color: #c81e2c;
   text-decoration: underline;
 }
 
@@ -246,7 +252,7 @@ footer a {
 
 footer a {
   font-size: 0.9rem;
-  color: #196551;
+  color: #c81e2c;
   text-decoration: underline;
 }
 
@@ -254,15 +260,17 @@ footer a {
 .project-card {
   padding: 2rem;
   margin-bottom: 2rem;
-  background: #f8fdfb;
-  border: 1px solid #196551;
+  background: #fffdf4;
+  border: 1px solid #111111;
+  border-left: 5px solid #c81e2c;
   border-radius: 1rem;
   transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 .project-card:hover {
-  box-shadow: 0 8px 16px rgba(25, 101, 81, 0.12);
+  box-shadow: 0 8px 16px rgba(242, 184, 7, 0.35);
   transform: translateY(-2px);
+  border-left-color: #f2b807;
 }
 
 .project-content h3 {
@@ -273,28 +281,33 @@ footer a {
 
 .project-content h3 a {
   text-decoration: none;
-  color: #196551;
-  border-bottom: 2px solid #196551;
-  transition: background-color 0.2s ease;
+  color: #111111;
+  border-bottom: 2px solid #c81e2c;
+  transition: background-color 0.2s ease, color 0.2s ease;
   padding-bottom: 2px;
 }
 
 .project-content h3 a:hover {
-  background-color: rgba(25, 101, 81, 0.1);
+  background-color: rgba(242, 184, 7, 0.25);
+  color: #c81e2c;
 }
 
 .course-details {
   margin-top: 1rem;
   font-size: 0.9rem;
-  color: #196551;
-  opacity: 0.8;
+  color: #111111;
+  opacity: 0.75;
+}
+
+.course-details strong {
+  color: #c81e2c;
 }
 
 .course-preview-link {
   display: inline-block;
   margin-top: 1rem;
   padding: 0.7rem 1.2rem;
-  background-color: #196551;
+  background-color: #c81e2c;
   color: #ffffff;
   text-decoration: none;
   border-radius: 0.5rem;
@@ -303,7 +316,8 @@ footer a {
 }
 
 .course-preview-link:hover {
-  background-color: #0f4a3a;
+  background-color: #f2b807;
+  color: #111111;
   transform: translateY(-1px);
 }
 
