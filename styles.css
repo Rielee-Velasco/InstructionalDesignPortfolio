@@ -44,7 +44,7 @@ img {
 }
 
 .hero {
-  padding: 4rem 0 3rem;
+  padding: 4rem 0 1.5rem;
   background-color: #ffffff;
   background-image: none;
   color: #111111;
@@ -111,7 +111,7 @@ img {
 }
 
 .section {
-  padding: 4rem 0;
+  padding: 2rem 0 4rem;
   background: #ffffff;
 }
 
@@ -149,7 +149,7 @@ img {
 }
 
 .project-header {
-  margin-bottom: 2rem;
+  margin-bottom: 1.25rem;
 }
 
 .project-header .button {
@@ -346,8 +346,8 @@ footer a {
 /* Project Carousels */
 .carousel {
   position: relative;
-  flex: 0 0 160px;
-  width: 160px;
+  flex: 0 0 210px;
+  width: 210px;
   aspect-ratio: 4 / 3;
   overflow: hidden;
   border-radius: 0.75rem;
