@@ -346,8 +346,8 @@ footer a {
 /* Project Carousels */
 .carousel {
   position: relative;
-  flex: 0 0 210px;
-  width: 210px;
+  flex: 0 0 500px;
+  width: 500px;
   aspect-ratio: 4 / 3;
   overflow: hidden;
   border-radius: 0.75rem;
