@@ -22,26 +22,29 @@
         </div>
         <!-- Project 1: OpenDQ MDM Course -->
         <div class="project-card">
+          <div class="carousel" data-images="assets/MDM 1.jpeg,assets/MDM 2.jpeg"></div>
           <div class="project-content">
             <h3><a href="https://rielee-velasco.github.io/OpenDQ/index.html" target="_blank" rel="noreferrer noopener">OpenDQ: Master Data Management</a></h3>
             <p>
               This e-learning course covers Master Data Management from foundational concepts through implementation, spanning data quality, governance, integration approaches, and long-term operating models. Narration scripts were paired with ChatGPT-generated and Canva-designed visuals, with Google Flow used for video production and Whale used to organize course documentation, and the course was built with GitHub Pages and custom HTML.
             </p>
-            <p class="course-details"><strong>Platform:</strong> GitHub Pages | <strong>Focus:</strong> Master Data Management</p>
+            <p class="course-details"><strong>Tools:</strong> ChatGPT, Canva, Google Flow, Whale | <strong>Platform:</strong> GitHub Pages | <strong>Focus:</strong> Master Data Management</p>
           </div>
         </div>
         <!-- Project 2: Daily Morning Checks -->
         <div class="project-card">
+          <div class="carousel" data-images="assets/Amazon 1.png,assets/Amazon 2.png"></div>
           <div class="project-content">
             <h3><a href="https://app.guidde.com/playbooks/1BFUGLhWVBy5LjqEeB8YqQ?origin=YT8ypfSj1Ahfr4LQohEpebxZt353" target="_blank" rel="noreferrer noopener">Daily Morning Checks</a></h3>
             <p>
-              This step-by-step guide walks Amazon brand managers through completing daily morning checks: confirming suppression status, reviewing prior-day sales, comparing performance against monthly projections, investigating significant changes, and sharing a clear daily update with the team. 
+              This step-by-step guide walks Amazon brand managers through completing daily morning checks: confirming suppression status, reviewing prior-day sales, comparing performance against monthly projections, investigating significant changes, and sharing a clear daily update with the team. This was published, paid client work.
             </p>
-            <p class="course-details"><strong>Platform:</strong> Guidde and Whale | <strong>Focus:</strong> Amazon Operations & SOP Documentation</p>
+            <p class="course-details"><strong>Platform:</strong> Guidde | <strong>Focus:</strong> Amazon Operations & SOP Documentation</p>
           </div>
         </div>
         <!-- Project 3: GROW Coaching -->
         <div class="project-card">
+          <div class="carousel" data-images="assets/Pharma 1.png,assets/Pharma 2.png"></div>
           <div class="project-content">
             <h3><a href="https://app.mindsmith.ai/lesson/cmnvel5hp002704lgxa7xj8lt/preview" target="_blank" rel="noreferrer noopener">GROW Coaching for Pharmacy Managers</a></h3>
             <p>
@@ -52,6 +55,7 @@
         </div>
         <!-- Project 4: Essential Spanish -->
         <div class="project-card">
+          <div class="carousel" data-images="assets/SPAN 1.jpeg,assets/SPAN 2.png"></div>
           <div class="project-content">
             <h3><a href="https://share.eu.articulate.com/FoW6V5eOOGwM4HxU_jbho" target="_blank" rel="noreferrer noopener">Essential Spanish for Call Center Agents: Customer Support Basics</a></h3>
             <p>
@@ -82,5 +86,78 @@ This e-learning course teaches SEO basics to help improve search rankings and we
       <a href="https://github.com/Rielee-Velasco/InstructionalDesignPortfolio" target="_blank" rel="noreferrer noopener">View repo on GitHub</a>
     </div>
   </footer>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.carousel').forEach((carousel) => {
+        const sources = (carousel.dataset.images || '')
+          .split(',')
+          .map((s) => s.trim())
+          .filter(Boolean)
+          .map((s) => encodeURI(s));
+
+        if (!sources.length) {
+          carousel.remove();
+          return;
+        }
+
+        const loaded = [];
+        let checked = 0;
+
+        sources.forEach((src, i) => {
+          const probe = new Image();
+          probe.onload = () => {
+            loaded[i] = src;
+            checked += 1;
+            if (checked === sources.length) build();
+          };
+          probe.onerror = () => {
+            checked += 1;
+            if (checked === sources.length) build();
+          };
+          probe.src = src;
+        });
+
+        function build() {
+          const valid = loaded.filter(Boolean);
+          if (!valid.length) {
+            carousel.remove();
+            return;
+          }
+
+          const track = document.createElement('div');
+          track.className = 'carousel-track';
+          valid.forEach((src, i) => {
+            const img = document.createElement('img');
+            img.src = src;
+            img.alt = '';
+            img.className = 'carousel-slide' + (i === 0 ? ' active' : '');
+            track.appendChild(img);
+          });
+          carousel.appendChild(track);
+
+          if (valid.length > 1) {
+            const dots = document.createElement('div');
+            dots.className = 'carousel-dots';
+            valid.forEach((_, i) => {
+              const dot = document.createElement('button');
+              dot.type = 'button';
+              dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+              dot.setAttribute('aria-label', `Show image ${i + 1}`);
+              dot.addEventListener('click', () => {
+                track.querySelectorAll('.carousel-slide').forEach((slide, si) => {
+                  slide.classList.toggle('active', si === i);
+                });
+                dots.querySelectorAll('.carousel-dot').forEach((d, di) => {
+                  d.classList.toggle('active', di === i);
+                });
+              });
+              dots.appendChild(dot);
+            });
+            carousel.appendChild(dots);
+          }
+        }
+      });
+    });
+  </script>
 </body>
 </html>
